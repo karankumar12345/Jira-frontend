@@ -1,10 +1,16 @@
 import './App.css'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import SignUp from './page/sign-up'
+import SignIn from './page/sign-in'
 function App() {
   return (
     <>
-    <div className='bg-red-300 h-40 '>karan  git add .
-git commit -m "Initial commit from personal account"
-vv kumar</div>
+  <BrowserRouter>
+  <Routes>
+    <Route path="/sign-in" element={<SignIn/>} />
+    <Route path="/sign-up" element={<SignUp/>} />
+  </Routes>
+  </BrowserRouter>
     </>
   )
 }
